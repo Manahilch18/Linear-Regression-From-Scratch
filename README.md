@@ -126,6 +126,11 @@ Training finished!
 Final learned line:
 
 marks = 13.066 × x_norm + 35.611
+<img width="960" height="720" alt="image" src="https://github.com/user-attachments/assets/42442e7e-9d9b-4450-b406-5c1dad361cc2" />
+
+<img width="840" height="600" alt="image" src="https://github.com/user-attachments/assets/1294571f-c828-429a-b1a7-917abd292ddb" />
+
+<img width="960" height="720" alt="image" src="https://github.com/user-attachments/assets/a3062d4d-e394-4b8e-8eee-7e69551a70a9" />
 
 ---
 
