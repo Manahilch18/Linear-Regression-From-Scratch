@@ -1,187 +1,177 @@
-# 📈 Linear Regression from Scratch using NumPy
+# 📈 Linear Regression from Scratch — Pure NumPy
 
-## Overview
+> Building Machine Learning from the ground up — no shortcuts, just math and code.
 
-This project implements Linear Regression completely from scratch using NumPy without relying on machine learning libraries for training.
-
-The goal is to understand how Machine Learning models learn by manually implementing:
-
-* Linear Regression
-* Mean Squared Error (MSE)
-* Gradient Descent Optimization
-* Model Evaluation
-* Data Visualization
-
-The project uses a synthetic dataset representing the relationship between study hours and exam marks.
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-Mathematical%20Core-orange?logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualizations-red?logo=matplotlib)
+![Sklearn](https://img.shields.io/badge/Scikit--Learn-Verification%20Only-green?logo=scikit-learn)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 ---
 
-## Features
+## 🧠 What Is This Project?
 
-### Data Generation
+This project implements **Linear Regression completely from scratch** using only NumPy — no ML libraries for training.
 
-* Generate study hours and marks dataset
-* Add realistic noise to simulate real-world data
+The dataset simulates the relationship between **study hours and exam marks**, with realistic noise added to reflect real-world data.
 
-### Data Processing
-
-* DataFrame creation using Pandas
-* Feature normalization
-* NumPy array operations
-
-### Machine Learning from Scratch
-
-* Prediction function
-* Cost Function (MSE)
-* Gradient Descent algorithm
-* Weight and bias updates
-
-### Visualizations
-
-* Scatter Plot of Study Hours vs Marks
-* Linear Regression Best Fit Line
-* Loss Curve (Cost vs Epochs)
-* 3D Cost Surface Visualization
-* Gradient Descent Path Visualization
-
-### Model Validation
-
-* Compare results with sklearn LinearRegression
-* Calculate MSE
-* Calculate R² Score
+The goal is simple:
+> Understand *how* Machine Learning models actually learn — not just *use* them.
 
 ---
 
-## Technologies Used
+## 🚀 What I Built
 
-* Python
-* NumPy
-* Pandas
-* Matplotlib
-* Scikit-Learn (only for verification)
+```
+Raw Data  →  Normalization  →  Gradient Descent  →  Learned Line  →  Validation vs Sklearn
+```
+
+| Component | Description |
+|-----------|-------------|
+| 📐 **Prediction** | `ŷ = w·x + b` |
+| 📉 **Cost Function** | Mean Squared Error (MSE) |
+| ⚙️ **Optimizer** | Gradient Descent from scratch |
+| 📊 **Evaluation** | MSE + R² Score |
+| ✅ **Verification** | Side-by-side check with Sklearn |
 
 ---
 
-## Project Structure
+## 📊 Sample Training Output
 
-```text
-Linear-Regression-From-Scratch/
-│
-├── linear_regression_scratch.py
-├── plot1_regression_fit.png
-├── plot2_loss_curve.png
-├── plot3_3d_cost_surface.png
-├── README.md
+```
+Training started...
+
+Epoch 0    | Cost = 592.436
+Epoch 100  | Cost = 9.683
+...
+Training finished!
+
+Final Learned Line:
+marks = 13.066 × x_norm + 35.611
 ```
 
 ---
 
-## Machine Learning Concepts Learned
+## 📉 Visualizations
+
+### Regression Fit
+<img width="840" height="600" alt="Regression Fit" src="https://github.com/user-attachments/assets/89527eda-47d9-4dd1-99a3-2e6997bce3ea" />
+
+### Loss Curve (Cost vs Epochs)
+<img width="840" height="600" alt="Loss Curve" src="https://github.com/user-attachments/assets/1294571f-c828-429a-b1a7-917abd292ddb" />
+
+### 3D Cost Surface + Gradient Descent Path
+<img width="960" height="720" alt="3D Cost Surface" src="https://github.com/user-attachments/assets/a3062d4d-e394-4b8e-8eee-7e69551a70a9" />
+
+---
+
+## 🔑 Core ML Concepts
 
 ### Linear Regression
+```
+y = w·x + b
+```
+- `w` → weight (slope) — how much marks change per study hour
+- `b` → bias (intercept) — baseline marks
 
-Linear Regression finds the best fitting straight line:
-
-y = wx + b
-
-Where:
-
-* w = weight (slope)
-* b = bias (intercept)
-
----
-
-### Cost Function
-
-Mean Squared Error (MSE) measures prediction error.
-
-Lower cost indicates a better model.
-
----
+### Mean Squared Error
+```
+MSE = (1/n) × Σ(y - ŷ)²
+```
+Lower MSE = better predictions.
 
 ### Gradient Descent
+```
+w = w - α × (∂L/∂w)
+b = b - α × (∂L/∂b)
+```
+Repeated until the cost stops decreasing.
 
-Gradient Descent repeatedly updates model parameters to minimize error.
-
-Process:
-
-1. Predict
-2. Calculate Error
-3. Compute Gradients
-4. Update Parameters
-5. Repeat
-
----
-
-## Sample Output
-
-Training started...
-
-Epoch 0 | Cost = 592.436
-
-Epoch 100 | Cost = 9.683
-
-Training finished!
-
-Final learned line:
-
-marks = 13.066 × x_norm + 35.611
- 
-<img width="840" height="600" alt="image" src="https://github.com/user-attachments/assets/89527eda-47d9-4dd1-99a3-2e6997bce3ea" />
-
-
-<img width="840" height="600" alt="image" src="https://github.com/user-attachments/assets/1294571f-c828-429a-b1a7-917abd292ddb" />
-
-<img width="960" height="720" alt="image" src="https://github.com/user-attachments/assets/a3062d4d-e394-4b8e-8eee-7e69551a70a9" />
+**The Loop:**
+```
+Predict → Measure Error → Compute Gradients → Update Weights → Repeat
+```
 
 ---
 
-## Learning Outcomes
+## 🗂️ Project Structure
 
-Through this project I learned:
-
-* NumPy mathematical operations
-* Data preprocessing
-* Feature scaling
-* Gradient Descent optimization
-* Cost functions
-* Linear Regression mathematics
-* Data visualization with Matplotlib
-* Model evaluation techniques
-
----
-
-## Why This Project Matters
-
-This project helped me understand the mathematics behind Machine Learning instead of simply using pre-built libraries.
-
-Building Linear Regression from scratch provides a strong foundation for:
-
-* Machine Learning
-* Deep Learning
-* Neural Networks
-* Artificial Intelligence
+```
+Linear-Regression-From-Scratch/
+│
+├── linear_regression_scratch.py   # Full implementation
+├── plot1_regression_fit.png       # Best-fit line visualization
+├── plot2_loss_curve.png           # Cost vs Epochs
+├── plot3_3d_cost_surface.png      # 3D gradient descent path
+└── README.md
+```
 
 ---
 
-## Future Improvements
+## ⚡ How to Run
 
-* Multiple Linear Regression
-* Polynomial Regression
-* Logistic Regression
-* L1/L2 Regularization
-* Interactive GUI Dashboard
+```bash
+# Clone the repository
+git clone https://github.com/your-username/Linear-Regression-From-Scratch.git
+cd Linear-Regression-From-Scratch
 
----
+# Install dependencies
+pip install numpy pandas matplotlib scikit-learn
 
-## Author
-
-Manahil
-
-Learning Journey:
-
-Python → NumPy → Pandas → Matplotlib → Mathematics for AI → Machine Learning
+# Run the project
+python linear_regression_scratch.py
+```
 
 ---
 
-⭐ If you find this project useful, consider giving it a star.
+## 🛠️ Tech Stack
+
+| Library | Role |
+|---------|------|
+| **NumPy** | Math, arrays, gradient computations |
+| **Pandas** | Dataset creation and handling |
+| **Matplotlib** | All visualizations (2D + 3D) |
+| **Scikit-Learn** | Final verification only — not used for training |
+
+---
+
+## 📚 What I Learned
+
+- How gradient descent actually minimizes loss — step by step
+- Why feature normalization matters before training
+- The math behind MSE and why we differentiate it
+- How to visualize the loss surface in 3D
+- That Sklearn's `LinearRegression` is doing exactly this under the hood
+
+---
+
+## 🗺️ My Learning Journey
+
+```
+Python → NumPy → Pandas → Matplotlib → Math for AI → ML from Scratch
+```
+
+This project is **Step 1** of building ML from the ground up.
+
+**Next steps planned:**
+- [ ] Multiple Linear Regression
+- [ ] Polynomial Regression
+- [ ] Logistic Regression from Scratch
+- [ ] L1 / L2 Regularization
+- [ ] Neural Network — one neuron at a time
+
+---
+
+## 👩‍💻 Author
+
+**Manahil**
+- 🐙 GitHub:  https://github.com/Manahilch18 
+- 💼 LinkedIn:  
+www.linkedin.com/in/manahil-ishfaq-673439322
+
+---
+
+> *"The best way to understand a machine learning algorithm is to build it yourself."*
+
+⭐ If this helped you, consider giving it a star — it means a lot!
